@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset="UTF-8" />
+  <title>Pesan</title>
+  <link rel="stylesheet" href="style.css" />
+</head><body>
+  <div class="container">
+    <p id="message">...</p>
+    <a href="#" class="btn" onclick="nextMessage()">Lanjut</a>
+  </div>
+  <script src="animasi.js"></script>
+  <script>
+    const messages = [
+      "HBD Atang!",
+  "Semoga kamu selalu baik-baik saja dan bahagia.",
+  "Semoga hidupmu penuh bunga-bunga.",
+  "semoga kamu bisa memaafkan semua yg perlu dimaafkan",
+  "semoga banyak doa baik yang tersalurkan ke kamu",
+  "kita gatau masa depan itu kek gimana",
+  "tapi semoga masa depanmu lebih bahagia banget",
+  "kalau misalnya kamu sekarang ada masalah",
+  "aku harap masalahmu cepet selese dan gada masalah yang lebih susah lagi kedepannya",
+  "kalau misalnya ada apa apa",
+  "jangan sungkan buat chat aku ya",
+  "maybe in next time, kalo aku dikasih kesempatan buat pilih temen",
+  "aku bakal pilih kamu lagi",
+  "semoga kita tetap berteman lama yaaa",
+  "karena setiap orang punya hari spesial",
+  "ku harap kamu juga bisa merasakan kebahagiaan itu",
+  "jangan terlalu keras sama dirimu ya tang",
+  "kalo capek istirahat aja bentar",
+  "jangan lupa makan juga",
+  "sebenernya aku udah gatau mau nulis apa lagi",
+  "intinya aku ga lupa kok sama ultahmu",
+  "selamat ulang tahun ataaaang"
+    ];
+    let i = 0;
+    const msg = document.getElementById('message');
+    function nextMessage() {
+      if (i < messages.length) {
+        msg.textContent = messages[i++];
+      } else {
+        window.location.href = 'page3.html';
+      }
+    }
+    nextMessage();
+  </script>
+</body></html>

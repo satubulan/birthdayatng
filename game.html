@@ -1,0 +1,32 @@
+<!DOCTYPE html><html><head>
+  <meta charset="UTF-8" />
+  <title>Game Rahasia</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .box-container { display: flex; justify-content: center; gap: 1rem; margin-top: 2rem; flex-wrap: wrap; }
+    .box { width: 100px; height: 100px; background: plum; color: white; border-radius: 12px; font-size: 32px;
+           display: flex; align-items: center; justify-content: center; cursor: pointer; }
+    #result { margin-top: 2rem; font-size: 1.2rem; }
+  </style>
+</head><body>
+  <div class="container">
+    <h2>Buka salah satu hadiah 🎁</h2>
+    <div class="box-container">
+      <div class="box" onclick="reveal(0)">🎁</div>
+      <div class="box" onclick="reveal(1)">🎁</div>
+      <div class="box" onclick="reveal(2)">🎁</div>
+    </div>
+    <p id="result"></p>
+  </div>
+  <script src="animasi.js"></script>
+  <script>
+    const messages = [
+      "Ayu bilang: Atang harus bahagia hari ini ya!",
+      "Peluk online dikirim ke kamu! 🤗",
+      "Selamat! Kamu dapet kartu ucapan dari McQueen! ⚡️"
+    ];
+    function reveal(i) {
+      document.getElementById('result').textContent = messages[i];
+    }
+  </script>
+</body></html>

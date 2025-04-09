@@ -1,0 +1,22 @@
+body {
+  background: lavenderblush;
+  font-family: sans-serif;
+  text-align: center;
+  margin: 0;
+  overflow-x: hidden;
+}
+.btn {
+  padding: 10px;
+  background: plum;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
+.container {
+  padding: 2rem;
+}
+.mcqueen {
+  max-width: 200px;
+  margin: 1rem auto;
+  display: block;
+}
