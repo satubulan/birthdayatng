@@ -1,32 +1,72 @@
-<!DOCTYPE html><html><head>
+<!DOCTYPE html>
+<html lang="id">
+<head>
   <meta charset="UTF-8" />
-  <title>Game Rahasia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pesan Rahasia</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    .box-container { display: flex; justify-content: center; gap: 1rem; margin-top: 2rem; flex-wrap: wrap; }
-    .box { width: 100px; height: 100px; background: plum; color: white; border-radius: 12px; font-size: 32px;
-           display: flex; align-items: center; justify-content: center; cursor: pointer; }
-    #result { margin-top: 2rem; font-size: 1.2rem; }
+    @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+    body {
+      font-family: 'Comic Neue', cursive;
+      background: lavenderblush;
+      margin: 0;
+      text-align: center;
+      padding: 2rem;
+    }
+    .gift-boxes {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      padding: 2rem;
+    }
+    .box {
+      width: 100px;
+      height: 100px;
+      background: #bfa3e6;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .box:hover {
+      transform: scale(1.1);
+    }
+    #result {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 2.2rem;
+      color: #5c2d91;
+    }
   </style>
-</head><body>
+</head>
+<body>
+  <audio autoplay loop>
+    <source src="bgm.mp3" type="audio/mpeg" />
+  </audio>
   <div class="container">
-    <h2>Buka salah satu hadiah 🎁</h2>
-    <div class="box-container">
-      <div class="box" onclick="reveal(0)">🎁</div>
-      <div class="box" onclick="reveal(1)">🎁</div>
-      <div class="box" onclick="reveal(2)">🎁</div>
+    <h2 style="font-size: 2rem;">Pilih salah satu kotak untuk buka pesan rahasia 🎁</h2>
+    <div class="gift-boxes">
+      <div class="box" onclick="revealMessage(0)">🎁</div>
+      <div class="box" onclick="revealMessage(1)">🎁</div>
+      <div class="box" onclick="revealMessage(2)">🎁</div>
     </div>
     <p id="result"></p>
   </div>
-  <script src="animasi.js"></script>
   <script>
     const messages = [
-      "Ayu bilang: Atang harus bahagia hari ini ya!",
-      "Peluk online dikirim ke kamu! 🤗",
-      "Selamat! Kamu dapet kartu ucapan dari McQueen! ⚡️"
+      "Ayu bilang: Atang harus bahagia hari ini ya! 💜💐",
+      "Peluk online dikirim ke kamu! 🤗💌",
+      "LOP U geng<br><span style='font-size: 4rem;'>🥹</span>"
     ];
-    function reveal(i) {
-      document.getElementById('result').textContent = messages[i];
+    function revealMessage(index) {
+      document.getElementById('result').textContent = messages[index];
     }
   </script>
-</body></html>
+  <script src="animasi.js"></script>
+</body>
+</html>
